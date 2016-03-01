@@ -1,5 +1,12 @@
 package app;
 
+/**
+ * Thanks to H. Conrad Cunningham, Yi Liu, Cuihua Zhang from the Computer &
+ * Information Science department, University of Mississippi.
+ * 
+ * @author H. Conrad Cunningham, Yi Liu, Cuihua Zhang
+ *
+ */
 public class QuickSort extends DivConqTemplate {
     protected boolean isSimple(Problem p) {
         return (((QuickSortDesc) p).getFirst() >= ((QuickSortDesc) p).getLast());

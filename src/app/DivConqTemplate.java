@@ -4,7 +4,7 @@ package app;
  * Thanks to H. Conrad Cunningham, Yi Liu, Cuihua Zhang from the Computer &
  * Information Science department, University of Mississippi.
  * 
- * @author jose
+ * @author H. Conrad Cunningham, Yi Liu, Cuihua Zhang
  *
  */
 abstract public class DivConqTemplate {
