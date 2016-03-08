@@ -2,7 +2,6 @@ package app;
 
 import java.util.ArrayList;
 
-import app.SortDesc;
 import app.def.DivConqTemplate;
 import app.def.Problem;
 import app.def.Solution;
