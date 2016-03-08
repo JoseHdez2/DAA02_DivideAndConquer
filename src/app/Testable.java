@@ -1,7 +1,7 @@
-package app3;
+package app;
 
-import app3.def.Problem;
-import app3.def.Solution;
+import app.def.Problem;
+import app.def.Solution;
 
 public interface Testable {
     

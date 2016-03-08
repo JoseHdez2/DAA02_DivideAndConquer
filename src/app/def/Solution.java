@@ -1,4 +1,4 @@
-package app3.def;
+package app.def;
 
 public interface Solution {
     

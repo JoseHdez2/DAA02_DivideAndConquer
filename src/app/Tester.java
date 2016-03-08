@@ -1,8 +1,8 @@
-package app3;
+package app;
 
 import java.util.ArrayList;
 
-import app3.def.Problem;
+import app.def.Problem;
 
 public abstract class Tester {
     

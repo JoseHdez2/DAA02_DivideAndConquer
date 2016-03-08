@@ -1,9 +1,9 @@
-package app3;
+package app;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import app3.def.Problem;
+import app.def.Problem;
 
 public class SortTester extends Tester{
 
@@ -42,6 +42,11 @@ public class SortTester extends Tester{
         return new SortDesc(arr);
     }
     
+    /**
+     * @param diffBeg   Difficulty of first test.
+     * @param diffEnd   Difficulty of last test.
+     * @param diffSteps How many tests should we conduct.
+     */
     protected void batchTests(int diffBeg, int diffEnd, int diffSteps){
 //        int diffBeg = 10, diffEnd = 100, diffSteps = 5;
         

@@ -1,6 +1,6 @@
-package app3;
+package app;
 
-import app3.def.Solution;
+import app.def.Solution;
 
 public class MaxSolution implements Solution {
     Integer max;

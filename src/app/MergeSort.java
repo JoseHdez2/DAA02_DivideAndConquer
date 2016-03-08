@@ -1,11 +1,11 @@
-package app3;
+package app;
 
 import java.util.ArrayList;
 
-import app3.def.DivConqTemplate;
-import app3.def.Problem;
-import app3.def.Solution;
-import app3.SortDesc;
+import app.SortDesc;
+import app.def.DivConqTemplate;
+import app.def.Problem;
+import app.def.Solution;
 
 /**
  * Thanks to H. Conrad Cunningham, Yi Liu, Cuihua Zhang from the Computer &

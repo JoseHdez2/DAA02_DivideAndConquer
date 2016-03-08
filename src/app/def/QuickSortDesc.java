@@ -1,9 +1,4 @@
-package app3;
-
-import java.util.ArrayList;
-
-import app3.def.Problem;
-import app3.def.Solution;
+package app.def;
 
 /**
  * Thanks to H. Conrad Cunningham, Yi Liu, Cuihua Zhang from the Computer &
@@ -12,13 +7,8 @@ import app3.def.Solution;
  * @author H. Conrad Cunningham, Yi Liu, Cuihua Zhang
  *
  */
-public class SortDesc implements Problem, Solution {
-    
-    public SortDesc(ArrayList<Integer> arr) {
-        this.arr = arr;
-    }
-    
-    public SortDesc(ArrayList<Integer> arr, int first, int last) {
+public class QuickSortDesc implements Problem, Solution {
+    public QuickSortDesc(int[] arr, int first, int last) {
         this.arr = arr;
         this.first = first;
         this.last = last;
@@ -32,14 +22,10 @@ public class SortDesc implements Problem, Solution {
         return last;
     }
 
-    public ArrayList<Integer> getArr() {
+    public int[] getArr() {
         return arr;
     }
     
-    public String toString(){
-        return arr.toString();
-    }
-    
-    private ArrayList<Integer> arr;
+    private int[] arr;
     private int first, last;
 }

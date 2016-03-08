@@ -1,4 +1,4 @@
-package app3.def;
+package app.def;
 
 abstract public class DivConqTemplate {
     final public Solution solve(Problem p) {
