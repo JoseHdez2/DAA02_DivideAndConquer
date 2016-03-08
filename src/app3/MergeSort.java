@@ -23,7 +23,7 @@ public class MergeSort extends DivConqTemplate implements Testable {
     }
     
     protected boolean isSimple(Problem p) {
-        return (((SortDesc) p).getFirst() >= ((SortDesc) p).getLast());
+        return ((SortDesc) p).getArr().size() <= 1;
     }
 
     protected Solution simplySolve(Problem p) {
@@ -52,28 +52,47 @@ public class MergeSort extends DivConqTemplate implements Testable {
     protected Solution combine(Problem p, Solution[] ss) {
         SortDesc halfA = (SortDesc)ss[0];
         SortDesc halfB = (SortDesc)ss[1];
+//        System.out.println(String.format("a= %s, b= %s", halfA, halfB));
         
         ArrayList<Integer> mergedArr = new ArrayList<Integer>();
         
         boolean aHasElements = true, bHasElements = true;
         boolean elementsLeftToMerge = true;
+        
+        boolean debug = false;
+        if(debug){
+            System.out.println("Traza:---------------");
+            System.out.println(String.format("%s (size = %d)", halfA, halfA.getArr().size()));
+            System.out.println(String.format("%s (size = %d)", halfB, halfB.getArr().size()));
+        }
+        
         while(elementsLeftToMerge) {
             aHasElements = halfA.getArr().isEmpty() ? false : true;
             bHasElements = halfB.getArr().isEmpty() ? false : true;
             
             if(aHasElements && bHasElements) {
                 comparisons++;
+//                System.out.println("ab");
                 if(halfA.getArr().get(0) <= halfB.getArr().get(0))
                     mergedArr.add(halfA.getArr().remove(0));
                 else
                     mergedArr.add(halfB.getArr().remove(0));
             } else if (aHasElements) {
+//                System.out.println("a");
                 mergedArr.add(halfA.getArr().remove(0));
             } else if (bHasElements) {
+//                System.out.println("b");
                 mergedArr.add(halfB.getArr().remove(0));
             } else {
+//                System.out.println("none(?)");
+                
                 elementsLeftToMerge = false;
             }
+        }
+        
+        if(debug){
+            System.out.println(String.format("%s (size = %d)", mergedArr, mergedArr.size()));
+            System.out.println("--------------");
         }
         
         return new SortDesc(mergedArr);

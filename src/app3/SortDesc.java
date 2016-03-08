@@ -36,6 +36,10 @@ public class SortDesc implements Problem, Solution {
         return arr;
     }
     
+    public String toString(){
+        return arr.toString();
+    }
+    
     private ArrayList<Integer> arr;
     private int first, last;
 }

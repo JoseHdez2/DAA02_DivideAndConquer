@@ -20,8 +20,11 @@ public class SortTester extends Tester{
         
         testables.add(new MergeSort());
         testables.add(new BubbleSort());
+        testables.add(new MaxValue());
         
-        conductTest();
+//        conductTest(100, 10);
+        batchTests(10, 100, 5);
+//        batchTests(10, 10, 1);
     }
     
     private Integer randNum() {
@@ -29,7 +32,7 @@ public class SortTester extends Tester{
     }
     
     @Override
-    protected Problem randomProblem() {
+    protected Problem randomProblem(int probDiff) {
         
         ArrayList<Integer> arr = new ArrayList<Integer>();
         
@@ -37,6 +40,21 @@ public class SortTester extends Tester{
             arr.add(randNum());
             
         return new SortDesc(arr);
+    }
+    
+    protected void batchTests(int diffBeg, int diffEnd, int diffSteps){
+//        int diffBeg = 10, diffEnd = 100, diffSteps = 5;
+        
+        // Increment of difficulty.
+        int diffInc = (diffEnd - diffBeg) / diffSteps;
+        
+        int curDiff = diffBeg; 
+        for (int i = 0; i < diffSteps; i++){
+           curDiff = diffBeg + i*diffInc;
+           if ( i == diffSteps-1) curDiff = diffEnd;
+           
+           conductTest(defNumProb, curDiff);
+        }
     }
 
 }
